@@ -128,7 +128,6 @@ public class PushIT {
     client.build(Paths.get(dockerDirectory), LOCAL_IMAGE);
 
     exception.expect(ImagePushFailedException.class);
-    exception.expectMessage("no basic auth credentials");
     client.push(LOCAL_IMAGE);
   }
 
